@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <div id="game">
-        <div>Level: <span id="level">0</span></div>
-        <div>Score: <span id="score">0</span></div>
+    <div id="block">
+        <div id="game">
+            <div>Level: <span id="level">0</span></div>
+            <div>Score: <span id="score">0</span></div>
+        </div>
+        <div id='next-tetro'></div>
     </div>
     <div class="main">
         <!-- <div class="cell"></div>
         <div class="cell movingCell"></div>
         <div class="cell fixedCell"></div> -->
     </div>
+    <div class="footer_game">
+        <button id="start_game">New Game</button>
+        <button id="pause_game">Pause</button>
+    </div>
+    <div id="game_over">Game Over</div>
     <script src="js/script.js"></script>
 </body>
 </html>

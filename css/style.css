@@ -10,8 +10,6 @@ body {
 }
 
 #game{
-    width: 300px;
-    margin: auto;
     padding-top: 20px;
     font-size: 40px;
 }
@@ -37,4 +35,39 @@ body {
 
 .fixedCell {
     background-color: green;
+}
+
+#next-tetro {
+    font-size: 0;
+    
+}
+
+#block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+    height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer_game {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    padding-top: 20px;
+}
+
+#game_over {
+    font-size: 100px;
+    color: red;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
