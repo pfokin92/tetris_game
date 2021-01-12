@@ -328,6 +328,34 @@ document.onkeydown = function(event) {
     }
 };
 
+document.addEventListener('touchstart', (e)=>{
+    console.log(e.changedTouches[0].pageX, e.changedTouches[0].pageY, document.documentElement.clientWidth, document.documentElement.clientHeight);
+    const x = e.changedTouches[0].pageX;
+    const y = e.changedTouches[0].pageY;
+    const widthScreen = document.documentElement.clientWidth;
+    const heightScreen = document.documentElement.clientHeight;
+    if (!isPause){
+        if (x/widthScreen<0.25&&(y>100)&&(y<300)) {
+            activeTetro.x -= 1;
+            if (hasCollisions()){
+                activeTetro.x +=1;
+            }
+        } else if (x/widthScreen>0.75&&(y>100)&&(y<380)) {
+            activeTetro.x += 1;
+            if (hasCollisions()){
+                activeTetro.x -=1;
+            }
+        } else if (y>390&&y<440){
+            moveTetroDown();
+        } else if (x>((widthScreen-160)/2)&&x<(widthScreen-(widthScreen-160)/2)&&y>380){
+            rotateTetro();
+        } else if (event.keyCode === 32){
+            dropTetro();
+        }
+        updateGameState();
+    }
+});
+
 pauseBtn.addEventListener('click', (e) => {
     if(isPause){
         e.target.innerHTML = 'Pause';
@@ -340,6 +368,8 @@ pauseBtn.addEventListener('click', (e) => {
     isPause= !isPause;
 });
 
+
+
 startBtn.addEventListener('click', (e)=> {
     e.target.innerHTML ='Start again';
     gameOver.style.display = 'none';
@@ -351,13 +381,9 @@ startBtn.addEventListener('click', (e)=> {
     }
 });
 
-
 draw();
-
 scoreElem.innerHTML = score;
 levelElem.innerHTML = currentLevel;
-
-
 
 function startGame() {
     moveTetroDown();

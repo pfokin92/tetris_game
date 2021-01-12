@@ -9,24 +9,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#game{
-    padding-top: 20px;
-    font-size: 40px;
-}
-
 .main {
-   width: 320px;
-   height: 620px;
-   margin: 20px auto 0;
-   border: 10px solid silver;
-   font-size: 0;
+    font-size: 0;
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid silver;
-    display: inline-block;
+    display: inline-block;    
 }
 
 .movingCell {
@@ -39,7 +27,6 @@ body {
 
 #next-tetro {
     font-size: 0;
-    
 }
 
 #block {
@@ -47,27 +34,139 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 350px;
-    height: 150px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .footer_game {
     margin: auto;
     display: flex;
     justify-content: space-evenly;
-    width: 300px;
-    padding-top: 20px;
 }
 
 #game_over {
-    font-size: 100px;
     color: red;
     text-align: center;
     display: none;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+@media (max-width:640px){
+    #game{
+        padding-top: 20px;
+        font-size: 25px;
+    }
+    
+    .main {
+       width: 160px;
+       height: 310px;
+       margin: 20px auto 0;
+       border: 5px solid silver;
+    }
+    
+    .cell {
+        width: 15px;
+        height: 15px;
+        border: 1px solid silver;
+    }
+
+    #block {
+        width: 85vw;
+        height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .footer_game {
+        margin-top: 50px;
+        width: 200px;
+        padding-top: 20px;
+    }
+    
+    #game_over {
+        font-size: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1280px){
+    #game{
+        padding-top: 20px;
+        font-size: 40px;
+    }
+    
+    .main {
+       width: 320px;
+       height: 620px;
+       margin: 20px auto 0;
+       border: 10px solid silver;
+    }
+    
+    .cell {
+        width: 30px;
+        height: 30px;
+        border: 1px solid silver;
+    }
+    
+    
+
+    #block {
+        width: 95vw;
+        height: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .footer_game {
+        width: 300px;
+        padding-top: 20px;
+    }
+    
+    #game_over {
+        font-size: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-width: 1281px){
+    
+    #game{
+        padding-top: 20px;
+        font-size: 40px;
+    }
+    
+    .main {
+       width: 320px;
+       height: 620px;
+       margin: 20px auto 0;
+       border: 10px solid silver;
+    }
+    
+    .cell {
+        width: 30px;
+        height: 30px;
+        border: 1px solid silver;
+    }
+
+    
+    #block {
+        width: 350px;
+        height: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .footer_game {
+        width: 300px;
+        padding-top: 20px;
+    }
+    
+    #game_over {
+        font-size: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
