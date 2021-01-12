@@ -347,7 +347,7 @@ document.addEventListener('touchstart', (e)=>{
             }
         } else if (y>390&&y<440){
             moveTetroDown();
-        } else if (x>((widthScreen-160)/2)&&x<(widthScreen-(widthScreen-160)/2)&&y>380){
+        } else if (x>((widthScreen-160)/2)&&x<(widthScreen-(widthScreen-160)/2)&&y<380){
             rotateTetro();
         } else if (event.keyCode === 32){
             dropTetro();
