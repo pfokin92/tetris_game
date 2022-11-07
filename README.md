@@ -1,6 +1,6 @@
 # Tetris Game - my first project
 
-**[Tetris](https://pfokin92.github.io/tetris_game)**
+*[Tetris](https://pfokin92.github.io/tetris_game)*
 
 ## Description 
 
